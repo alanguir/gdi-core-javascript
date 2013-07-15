@@ -1,5 +1,10 @@
+# Girl Develop It intro to Javascript and jQuery
 
-Class 1
+We've combined this four part series into two sessions. Session one is class 1 & 2, session two is classes 3 & 4. 
+
+Class 4 should be considered advanced extra credit javascript ninja status. You'll have a solid foundation for learning more about 
+
+##Class 1
 
 * Welcome!
 	* Terms
@@ -23,7 +28,7 @@ Class 1
 	* Returning values
 	* Scope	
 
-Class 2
+## Class 2
 
 * Arrays
 	* Definition
@@ -54,7 +59,7 @@ Here we start applying these concepts to a webpage.
 	* InnerHTML
 	* Modifying
 	
-Class 3
+## Class 3
 
 * jQuery drumroll
 	* What are libraries?
@@ -84,7 +89,7 @@ Class 3
 		
 -- Break -- 
 
-Class 4
+## Class 4
 
 * Modern web app architechture
 	* APIs
