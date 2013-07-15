@@ -58,61 +58,6 @@
           </div>
         </section>
         
-        <!-- Loops-->
-        <section>
-          <h3>Loops</h3>
-          <p>Sometimes you want to go through a piece of code multiple times</p>
-          <p class = "fragment">Why?</p>
-          <ul>
-            <li class = "fragment">Showing a timer count down</li>
-            <li class = "fragment">Displaying the results of a search</li>
-            <li class = "fragment">Adding images to a slideshow</li>
-          </ul>
-        </section>
-        
-         <section>
-          <h3>The while loop</h3>
-          <p>The while loop tells JS to repeat statements while a condition is true:</p>
-          <pre><code contenteditable class = "javascript">
-      while (expression) {
-        // statements to repeat
-      }
-          </code></pre>
-          <pre><code contenteditable class = "javascript">
-      var x = 0;
-      while (x < 5) {
-        console.log(x);
-        x++;
-      }
-          </code></pre>
-          <div class = "fragment">
-            Review: '++' means increment by 1!
-          </div>
-          <div class = "fragment">
-            <div class = "yellow">Danger!!</div>
-            <p>What happens if we forget x++;?</p>
-            <p>The loop will never end!!</p>
-          </div>
-        </section>
-        
-        <section>
-          <h3>The for loop</h3>
-          <p>The for loop is a safer way of looping</p>
-          <pre><code contenteditable class = "javascript">
-          for (initialize; condition; update) {
-            // statements to repeat
-          }
-          </code></pre>
-          <pre><code contenteditable class = "javascript">
-          for (var i = 0; i < 5; i++) {
-            console.log(i);
-          }
-          </code></pre>
-          <div class = "fragment">
-            Less danger of an infinite loop. All conditions are at the top!
-          </div>
-        </section>
-          
         <!-- Arrays -->
         <section>
           <h3>Array</h3>
@@ -179,6 +124,63 @@ var luckyThings = ['Rainbows', 7, 'Horseshoes'];
             </code></pre>
           </div>
         </section>
+
+        <!-- Loops-->
+        <section>
+          <h3>Loops</h3>
+          <p>Sometimes you want to go through a piece of code multiple times</p>
+          <p class = "fragment">Why?</p>
+          <ul>
+            <li class = "fragment">Showing a timer count down</li>
+            <li class = "fragment">Displaying the results of a search</li>
+            <li class = "fragment">Adding images to a slideshow</li>
+          </ul>
+        </section>
+        
+         <section>
+          <h3>The for loop</h3>
+          <p>The for loop is the safest way of looping</p>
+          <pre><code contenteditable class = "javascript">
+          for (initialize; condition; update) {
+            // statements to repeat
+          }
+          </code></pre>
+          <pre><code contenteditable class = "javascript">
+          for (var i = 0; i < 5; i++) {
+            console.log(i);
+          }
+          </code></pre>
+          <div class = "fragment">
+            Since all conditions are at the top, the loop ends when we tell it to. 
+          </div>
+        </section>
+
+         <section>
+          <h3>The while loop</h3>
+          <p>The while loop tells JS to repeat statements while a condition is true:</p>
+          <pre><code contenteditable class = "javascript">
+      while (expression) {
+        // statements to repeat
+      }
+          </code></pre>
+          <pre><code contenteditable class = "javascript">
+      var x = 0;
+      while (x < 5) {
+        console.log(x);
+        x++;
+      }
+          </code></pre>
+          <div class = "fragment">
+            Review: '++' means increment by 1!
+          </div>
+          <div class = "fragment">
+            <div class = "yellow">Danger!!</div>
+            <p>What happens if we forget x++;?</p>
+            <p>The loop will never end!! Try to avoid using while loops if you can!</p>
+          </div>
+        </section>
+          
+        <!-- Putting it together -->
         
         <section>
           <h3>Loops and Arrays</h3>
