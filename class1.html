@@ -323,48 +323,51 @@ var sentence = "My dinosaur is a " + dinosaur + ". It's name is " + name + ".";
           <h3>Let's Develop It</h3>
           <p>Create a new html file</p>
           <pre><code class ="html">
-&lt;html>
-  &lt;head>
-    &lt;title>My Site!&lt;/title>
-  &lt;/head>
-  &lt;body>
-    My site!
-  &lt;/body>
-&lt;/html>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;My Todo List!&lt;/title&gt;
+    &lt;script src=&quot;javascript.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;No todo items.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
+<p><a href="http://j.mp/gdi-js-ex1-html">http://j.mp/gdi-js-ex1-html</a></p>
         </section>
         
         <section>
           <h3>Let's Develop It</h3>
           <p>Create a new javascript file (a file that ends in .js)</p>
           <p>Link it to your html file</p>
-          <pre><code class ="html">
-&lt;html>
-  &lt;head>
-    &lt;title>My Site!&lt;/title>
-    &lt;script src="javascript.js">&lt;/script>
-  &lt;/head>
-  &lt;body>
-    My site!
-  &lt;/body>
-&lt;/html>
+          <pre><code class ="javascript">
+var age = 26;
+var oldAge = 96;
+var perDay = 2;
+
+var days = (oldAge - age) * 365;
+var total = perDay * days;
+console.log("You have " + total + " tasks left until the ripe old age of " + oldAge);
 </code></pre>
+<p><a href="http://j.mp/gdi-js-ex1-js">http://j.mp/gdi-js-ex1-js</a></p>
         </section>
         
         <section>
           <h3>Let's Develop It</h3>
           <p>Life time supply calculator</p>
-          <p>Ever wonder how much a lifetime supply of your favorite snack or drink is?</p>
+          <p>Ever wonder how many things you can get done in your life?</p>
           <ul>
             <li>Store your age in a variable</li>
             <li>Store your maximum age in a variable</li>
-            <li>Store an estimated amount per day in a variable</li>
-            <li>Calculate how many you would eat/drink for the rest of your life.</li>
-            <li>Output the result in an alert(see below) like so: "You will need NN to last you until your old age of NN"</li>
+            <li>Store an estimated number of things you can do per day in a variable</li>
+            <li>Calculate how many things you can do for the rest of your life.</li>
+            <li>Output the result in a console (see below) like so: "You have NN tasks left  until your old age of NN"</li>
           </ul>
           
 <pre><code contenteditable class ="javascript">
-  alert(answer);
+  console.log(answer);
 
 </code></pre>
           
