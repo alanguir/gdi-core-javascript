@@ -5,16 +5,20 @@ function calculate(){
 
     var days = (oldAge - age) * 356;
     var total = perDay * days;
-    var resultDiv = document.getElementById('lifetime-supply')
+    
+    var resultDiv = document.getElementById('lifetime-supply');
+    
     if(total > 40000){
-        resultDiv.innerHTML = "You will need " + total + " to last you until the ripe old age of " + oldAge + ". Wow! That's a lot!";
+      resultDiv.innerHTML = "You have " + total + " tasks left until the ripe old age of " + oldAge + ". Wow! That's a lot!";
     }else{
-        resultDiv.innerHTML = "You will need " + total + " to last you until the ripe old age of " + oldAge + ". You seem pretty reasonable";
-    } 
+      resultDiv.innerHTML = "You have " + total + " tasks left until the ripe old age of " + oldAge + ". You better get started!";
+    }
 }
 
 function favoriteThings(){
     var favoriteThings = ['Rabbits', 'Orange', 'Yogurt', 'Brussel Sprouts', 'Otters'];
+    var result = 'My favorite things are: ';
+    
     var resultDiv = document.getElementById('favorite-things');
     
     var resultParagraph = document.createElement('p');
@@ -27,10 +31,13 @@ function favoriteThings(){
             result += "and " + favoriteThings[i] + '.';
         }
     }
+    
     var resultText = document.createTextNode(result);
+    
     resultParagraph.appendChild(resultText);
     resultDiv.appendChild(resultParagraph);
 }
+
 function myFriends(){
     var friends = [
         {name: 'Santa Claus',
@@ -44,17 +51,21 @@ function myFriends(){
     
     var introParagraph = document.createElement('p');
     var introText = document.createTextNode('My friends are:');
+    
     introParagraph.appendChild(introText);
     resultDiv.appendChild(introParagraph)
     
     for(var i = 0; i < friends.length; i++){
         var resultParagraph = document.createElement('p');
         var resultText = document.createTextNode(describeFriend(friends[i]));
+        
         resultParagraph.appendChild(resultText);
         resultDiv.appendChild(resultParagraph);
     }
+    
     document.body.appendChild(resultDiv);
 }
+
 function describeFriend(friend){
     return "My friend " + friend.name + " has " + friend.hair + " hair. ";
 }

@@ -6,10 +6,10 @@ function calculate(){
     var days = (oldAge - age) * 356;
     var total = perDay * days;
     if(total > 40000){
-        alert("You will need " + total + " to last you until the ripe old age of " + oldAge + ". Wow! That's a lot!");
+      console.log("You have " + total + " tasks left until the ripe old age of " + oldAge + ". Wow! That's a lot!");
     }else{
-        alert("You will need " + total + " to last you until the ripe old age of " + oldAge + ". You seem pretty reasonable");
-    } 
+      console.log("You have " + total + " tasks left until the ripe old age of " + oldAge + ". You better get started!");
+    }
 }
 
 function favoriteThings(){
@@ -22,8 +22,9 @@ function favoriteThings(){
             result += "and " + favoriteThings[i] + '.';
         }
     }
-    alert(result);
+    console.log(result);
 }
+
 function myFriends(){
     var friends = [
         {name: 'Santa Claus',
@@ -37,7 +38,7 @@ function myFriends(){
     for(var i = 0; i < friends.length; i++){
         results += describeFriend(friends[i]);
     }
-    alert(results)
+    console.log(results)
 }
 function describeFriend(friend){
     return "My friend " + friend.name + " has " + friend.hair + " hair. ";
