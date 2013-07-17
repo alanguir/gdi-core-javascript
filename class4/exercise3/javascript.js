@@ -65,12 +65,13 @@ function getMeetups(topic, zipcode){
 
 function parseMeetups(results){
    for(var i = 0; i < results.length; i ++){
-       var div = $('<div class ="event"></div>');
+       var div = $('<div class="event"></div>');
        var name = $('<div> Name: '+ results[i].name+'</div>');
        var description = $('<div> Description: '+ results[i].description+'</div>');
        var group = $('<div> Group: '+ results[i].group.name+'</div>');
        var link = $('<div> Learn More: <a href ="'+results[i].event_url+'" target = "_blank">'+results[i].event_url+'</a></div>')
        div.append(name, description, group, link);
+       console.log(div);
        $('#events').append(div);
    } 
 }
