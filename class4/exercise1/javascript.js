@@ -1,5 +1,9 @@
 $(document).ready(function(){
+    
+
     getMeetups();
+
+
     $('.box').bind({
         click: function() {
           $(this).css('background-color', 'green')
@@ -43,8 +47,7 @@ function getMeetups(){
 		url: url + method,
 		data: {
 		  key: api_key,
-		  lat: 40.7143528,
-		  lon: -74.0059731,
+		  zip: 48226,
 		  topic: 'JavaScript'
 		},
 		crossDomain: true,
