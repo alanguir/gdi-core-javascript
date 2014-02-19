@@ -6,12 +6,13 @@ function calculate(){
     var days = (oldAge - age) * 356;
     var total = perDay * days;
     
-    var resultDiv = document.getElementById('lifetime-supply');
+    //var resultDiv = document.getElementById('lifetime-supply');
+    var resultDiv = $('#lifetime-supply');
     
     if(total > 40000){
-      resultDiv.innerHTML = "You have " + total + " tasks left until the ripe old age of " + oldAge + ". Wow! That's a lot!";
+      resultDiv.html("You have " + total + " tasks left until the ripe old age of " + oldAge + ". Wow! That's a lot!");
     }else{
-      resultDiv.innerHTML = "You have " + total + " tasks left until the ripe old age of " + oldAge + ". You better get started!";
+      resultDiv.html("You have " + total + " tasks left until the ripe old age of " + oldAge + ". You better get started!");
     }
 }
 
@@ -19,9 +20,9 @@ function favoriteThings(){
     var favoriteThings = ['Rabbits', 'Orange', 'Yogurt', 'Brussel Sprouts', 'Otters'];
     var result = 'My favorite things are: ';
     
-    var resultDiv = document.getElementById('favorite-things');
+    var resultDiv = $('#favorite-things');
     
-    var resultParagraph = document.createElement('p');
+    var resultParagraph = $('<p></p>');
     var result = 'My favorite things are: ';
     
     for (var i = 0; i<favoriteThings.length; i++){
@@ -32,10 +33,10 @@ function favoriteThings(){
         }
     }
     
-    var resultText = document.createTextNode(result);
+    //var resultText = document.createTextNode(result);
     
-    resultParagraph.appendChild(resultText);
-    resultDiv.appendChild(resultParagraph);
+    resultParagraph.append(result);
+    resultDiv.append(resultParagraph);
 }
 
 function myFriends(){
@@ -47,25 +48,44 @@ function myFriends(){
         {name: 'Tooth Fairy',
         hair: 'blue'}
     ];
-    var resultDiv = document.createElement('div');
+    var resultDiv = $('<div>');
     
-    var introParagraph = document.createElement('p');
-    var introText = document.createTextNode('My friends are:');
+    var introParagraph = $('<p>');
+    var introText = 'My friends are:';
     
-    introParagraph.appendChild(introText);
-    resultDiv.appendChild(introParagraph)
+    introParagraph.append(introText);
+    resultDiv.append(introParagraph)
     
     for(var i = 0; i < friends.length; i++){
-        var resultParagraph = document.createElement('p');
-        var resultText = document.createTextNode(describeFriend(friends[i]));
+        var resultParagraph = $('<p>');
+        var resultText = describeFriend(friends[i]);
         
-        resultParagraph.appendChild(resultText);
-        resultDiv.appendChild(resultParagraph);
+        resultParagraph.append(resultText);
+        resultDiv.append(resultParagraph);
     }
     
-    document.body.appendChild(resultDiv);
+    //document.body.appendChild(resultDiv);
+    $("body").append(resultDiv);
 }
 
 function describeFriend(friend){
     return "My friend " + friend.name + " has " + friend.hair + " hair. ";
 }
+var listItems = $('li');
+      /*
+      for (var i =0; i < listItems.length; i++) {
+        var listItem = listItems[i];
+        console.log(listItem);
+      }
+      */
+    listItems.each(function(index, listItem){
+        console.log(listItem);
+    });
+
+
+
+
+
+
+
+
